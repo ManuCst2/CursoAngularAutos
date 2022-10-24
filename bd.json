@@ -1,0 +1,83 @@
+{
+  "marcas": [
+    {
+      "nombre": "Ford",
+      "clase": "Compacto",
+      "id": 1
+    },
+    {
+      "nombre": "Chevrolet",
+      "clase": "Compacto",
+      "id": 2
+    },
+    {
+      "nombre": "Audi",
+      "clase": "Compacto",
+      "id": 3
+    },
+    {
+      "nombre": "Ford",
+      "clase": "Pick Up",
+      "id": 4
+    },
+    {
+      "nombre": "Nissan",
+      "clase": "Pick Up",
+      "id": 5
+    },
+    {
+      "nombre": "JEEP",
+      "clase": "Auto",
+      "id": 6
+    },
+    {
+      "nombre": "Jeep",
+      "clase": "Van",
+      "id": 7
+    }
+  ],
+  "lineas": [
+    {
+      "id": 1,
+      "nombre": "Focus",
+      "modelo": "2000",
+      "color": "blanco"
+    },
+    {
+      "nombre": "Sentra",
+      "modelo": 2005,
+      "color": "Azul",
+      "id": 2
+    },
+    {
+      "nombre": "Fusion",
+      "modelo": 2010,
+      "color": "Negro",
+      "id": 3
+    },
+    {
+      "nombre": "Aveo",
+      "modelo": 2015,
+      "color": "Rojo",
+      "id": 4
+    },
+    {
+      "nombre": "A1",
+      "modelo": 2013,
+      "color": "Blanco",
+      "id": 5
+    }
+  ],
+  "users": [
+    {
+      "email": "correo@correo",
+      "password": "$2a$10$XV9Z0GOTC7R2ivZZyOIC6u/XMKO.BlLogzLiZqS4WfUbq4/AoIQx.",
+      "id": 1
+    },
+    {
+      "email": "correo@mail",
+      "password": "$2a$10$kzE2yuWtMtmo00aJZsifSOifFuErrkdhl0XDGfWTv3Z6xIBHfm/ay",
+      "id": 2
+    }
+  ]
+}

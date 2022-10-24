@@ -1,0 +1,56 @@
+<div class="container">
+
+    <div class="row mt-3">
+        <div class="col">
+            <h1>{{ TitleDesc }}</h1>
+        </div>
+    </div>
+
+    <form [formGroup]="formulario" autocomplete="off"> 
+        <div class="row">
+            <div class="col-6">
+                <mat-form-field class="w-100">
+                    <mat-label>Marca: </mat-label>
+                    <input matInput formControlName="nombre" />
+                </mat-form-field>
+                <div *ngIf="(desc?.dirty || desc?.touched) && desc?.errors">
+                    <mat-error *ngIf="desc?.errors?.['required']">
+                        El nombre de marca es requerida.
+                    </mat-error>
+                    <mat-error *ngIf="desc?.errors?.['minlength']">
+                        El nombre de marca es debe ser minimo de 5.
+                    </mat-error>
+                    <mat-error *ngIf="desc?.errors?.['maxlength']">
+                        El nombre de marca es debe ser máximo de 100.
+                    </mat-error>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <mat-form-field class="w-100">
+                    <mat-label>Clase: </mat-label>
+                    <input matInput formControlName="clase" />
+                </mat-form-field>
+                <div *ngIf="(clase?.dirty || clase?.touched) && clase?.errors">
+                    <mat-error *ngIf="clase?.errors?.['required']">
+                        La clase es requerida.
+                    </mat-error>
+                </div>
+            </div>
+        </div>
+
+        <br>
+        <div class="row">
+            <div class="col-6">
+                <button mat-raised-button color="primary" type="submit" [disabled]="formulario.invalid" class="me-5" (click)="GuardarMarca()">
+                    Guardar <mat-icon>save</mat-icon>
+                </button>
+                <button mat-raised-button color="secondary" [routerLink]="['/marcas']" type="button">
+                    Cancelar <mat-icon>close</mat-icon>
+                </button>
+            </div>
+        </div>
+
+    </form>
+</div>

@@ -1,0 +1,63 @@
+<div class="container">
+
+    <div class="row mt-3">
+        <div class="col">
+            <h1>{{ TitleDesc }}</h1>
+        </div>
+    </div>
+
+    <form [formGroup]="formulario" autocomplete="off"> 
+        <div class="row">
+            <div class="col-6">
+                <mat-form-field class="w-100">
+                    <mat-label>Linea: </mat-label>
+                    <input matInput formControlName="nombre" type="text"/>
+                </mat-form-field>
+                <div *ngIf="(nombre?.dirty || nombre?.touched) && nombre?.errors">
+                    <mat-error *ngIf="nombre?.errors?.['required']">
+                        El nombre de línea es requerida.
+                    </mat-error>
+                    <mat-error *ngIf="nombre?.errors?.['maxlength']">
+                        El nombre de línea es debe ser máximo de 100.
+                    </mat-error>
+                </div>
+            </div>
+        </div> 
+        <div class="row">
+            <div class="col-6">
+                <mat-form-field class="w-100">
+                    <mat-label>Modelo: </mat-label>
+                    <input matInput formControlName="modelo" type="number"/>
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <mat-form-field class="w-100">
+                    <mat-label>Color: </mat-label>
+                    <input matInput formControlName="color" type="text"/>
+                </mat-form-field>
+                <div *ngIf="(color?.dirty || color?.touched) && color?.errors">
+                    <mat-error *ngIf="color?.errors?.['required']">
+                        El color es requerido.
+                    </mat-error>
+                    <mat-error *ngIf="color?.errors?.['maxlength']">
+                        El nombre de línea es debe ser máximo de 30.
+                    </mat-error>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-6">
+                <button mat-raised-button color="primary" type="submit" [disabled]="formulario.invalid" class="me-5" (click)="GuardarLinea()">
+                    Guardar <mat-icon>save</mat-icon>
+                </button>
+                <button mat-raised-button color="secondary" [routerLink]="['/lineas']" type="button">
+                    Cancelar <mat-icon>close</mat-icon>
+                </button>
+            </div>
+        </div>
+
+    </form>
+</div>
